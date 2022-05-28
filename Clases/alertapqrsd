@@ -1,0 +1,13 @@
+class alertapqrsd:
+    def __init__(self, pqrsd:str, usuario:str):
+        self.pqrsd = pqrsd
+        self.usuario = usuario
+        def Getpqrsd (self):
+         #viaje
+            input("ingrese pqrsd: ")
+            print(f'pqrsd: {self.pqrsd}')
+            def Getusuario (self):
+         #usuario
+             input("ingrese usuario: ")
+            print(f'usuario: {self.usuario}')
+            
