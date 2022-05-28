@@ -1,0 +1,3 @@
+BaseBuses=open('BusesLista.csv','r')
+leer=BaseBuses.readline()
+print(leer)

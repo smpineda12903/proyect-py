@@ -1,0 +1,3 @@
+BaseEmpresas=open('EmpresaLista.csv','r')
+leer=BaseEmpresas.readline()
+print(leer)
