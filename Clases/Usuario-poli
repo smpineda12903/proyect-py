@@ -1,0 +1,73 @@
+class Usuario:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def role(self):
+        return "Soy una persona"
+
+    def fact(self):
+        return self.Persona
+
+    def __str__(self):
+        return self.nombre
+
+
+class DueñoEmpresa(Usuario):
+    def __init__(self, Empresa):
+        super().__init__("Dueño de empresa")
+        self.Empresa = Empresa
+
+    def fact(self):
+        return self.Empresa
+
+    def role(self):
+        return "Soy dueño de empresa"
+
+class Ruta(Usuario):
+    def __init__(self, Ruta, PersonaAsignada):
+        super().__init__("Ruta")
+        self.Ruta = Ruta
+        self.PersonaAsignada=PersonaAsignada
+
+    def fact(self):
+        return self.Ruta
+
+    def role(self):
+        return self.PersonaAsignada
+
+
+class Conductor(Usuario):
+    def __init__(self, Placa):
+        super().__init__('Conductor')
+        self.Placa = Placa
+    
+    def fact(self):
+        return self.Placa
+
+    def role(self):
+        return "soy conductor"
+
+class Persona(Usuario):
+    def __init__(self, Persona):
+        super().__init__('Persona')
+        self.Persona = Persona
+
+a = DueñoEmpresa('nombre empresa')
+b = Conductor('ACH-123')
+c = Persona('Juan')
+d = Ruta('Manizales-Chinchina','Juan')
+print('el rol es: ',a)
+print('el nombre de la empresa es: ',a.fact())
+print(a.role())
+print()
+print('el rol es: ',b)
+print('las placas del vehiculo asignado son: ',b.fact())
+print(b.role())
+print()
+print('su rol es: ',c)
+print('el nombre es: ',c.fact())
+print(c.role())
+print()
+print(d)
+print('la ruta es: ',d.fact())
+print('La persona asignada para la ruta es: ',d.role())

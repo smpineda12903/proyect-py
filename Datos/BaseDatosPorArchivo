@@ -1,0 +1,4 @@
+BasePersonas=open('ManejoDeDatos.csv','r')
+leer=BasePersonas.readline().split(",")
+
+print(leer[3])

@@ -1,0 +1,3 @@
+BasePersonas=open('ManejoDeDatos.csv','r')
+leer=BasePersonas.readline()
+print(leer)
